@@ -1,2 +1,8 @@
 {{question-detail model=model destroyQuestion="destroyQuestion"}}
 {{update-question model=model update="update"}}
+<br>
+<h3>Answers</h3>
+{{#each model.answers as |answer|}}
+{{answer-tile answer=answer}}
+{{/each}}
+<hr>
