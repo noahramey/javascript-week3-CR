@@ -1,10 +1,11 @@
 <div class="container">
   <div class="jumbotron">
-    <h1>Questions and Answers</h1>
+    <h1 class="text-center">Questions and Answers</h1>
   </div>
+  <ul class="nav nav-tabs">
+    <li role="presentation">{{#link-to 'index'}}Home{{/link-to}}</li>
+    <li role="presentation">{{#link-to 'about'}}About{{/link-to}}</li>
+    <li role="presentation">{{#link-to 'contact'}}Contact{{/link-to}}</li>
+  </ul>
   {{outlet}}
-  <footer>
-    {{#link-to 'about'}}About Us{{/link-to}}
-    {{#link-to 'contact'}}Contact Us{{/link-to}}
-  </footer>
 </div>

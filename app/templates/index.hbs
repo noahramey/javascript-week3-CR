@@ -1,6 +1,11 @@
-<h2>Questions</h2>
-{{#each model as |question|}}
-  {{#link-to 'question' question.id}}{{question-tile question=question}}{{/link-to}}
-{{/each}}
-
-{{new-question save="save"}}
+<h2 class="text-center">Questions</h2>
+<div class="row">
+  <div class="col-sm-6">
+    {{#each model as |question|}}
+      {{question-tile question=question}}
+    {{/each}}
+  </div>
+  <div class="col-sm-6">
+    {{new-question save="save"}}
+  </div>
+</div>
