@@ -1,6 +1,15 @@
-<h3>Question by {{model.author}}</h3>
-<br>
-<h1>{{model.question}}</h1>
-<h6>{{model.notes}}</h6>
-<br>
-<button {{action 'delete' model}} class="btn btn-danger">Delete</button>
+<div class="question-box">
+  <h3 class="question">Question by {{model.author}}</h3>
+  <br>
+  <h1>{{model.question}}</h1>
+  <h6>{{model.notes}}</h6>
+  <div class="row">
+    <div class="col-sm-2">
+      <button {{action 'delete' model}} class="btn btn-danger">Delete</button>
+    </div>
+    <div class="col-sm-8">
+      {{update-question model=model update="update"}}
+    </div>
+  </div>
+  <br>
+</div>

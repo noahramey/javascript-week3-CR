@@ -1,0 +1,16 @@
+<div class="submit-box">
+  <h2>Submit an Answer</h2>
+  <div>
+    <form>
+      <div class="form-group">
+        {{input value=author id="author" placeholder="Your Name"}}
+      </div>
+
+      <div class="form-group">
+        {{input value=content id="content" placeholder="Your Answer"}}
+      </div>
+
+      <button {{action 'save'}} class="btn btn-success">Save</button>
+    </form>
+  </div>
+</div>

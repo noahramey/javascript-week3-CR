@@ -1,8 +1,18 @@
-{{question-detail model=model destroyQuestion="destroyQuestion"}}
-{{update-question model=model update="update"}}
-<br>
-<h3>Answers</h3>
-{{#each model.answers as |answer|}}
-{{answer-tile answer=answer}}
-{{/each}}
+<div class="row">
+  <div class="col-sm-6">
+    {{question-detail model=model destroyQuestion="destroyQuestion" update="update"}}
+  </div>
+  <div class="col-sm-6">
+    {{#each model.answers as |answer|}}
+    <div class="row">
+      {{answer-tile answer=answer}}
+    </div>
+    {{/each}}
+  </div>
+</div>
 <hr>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    {{new-answer saveAnswer="saveAnswer" question=model}}
+  </div>
+</div>
